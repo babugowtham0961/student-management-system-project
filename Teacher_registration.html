@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Registration</title>
+
+<link rel="stylesheet" href="scripty.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+        <div class="logo-box">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>
+                <h2>ATTANCE</h2>
+                <p>Smart Attendance, Better Education</p>
+            </div>
+        </div>
+
+        <div class="left-content">
+            <h1>Create Your Teacher Account</h1>
+
+            <p>
+                Join us and manage your classes,
+                attendance and students easily.
+            </p>
+        </div>
+
+        <img src="image/teacher.jpg" class="illustration">
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+
+        <div class="form-header">
+
+            <div class="icon-circle">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+
+            <div>
+                <h1>Teacher Registration</h1>
+                <p>Fill in the details to create your account</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <form action="register" method="post" enctype="multipart/form-data">
+
+            <div class="form-grid">
+
+                <!-- Full Name -->
+                <div class="input-box">
+                    <label>Full Name</label>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text"
+                               name="fullname"
+                               placeholder="Enter your full name"
+                               required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="input-box">
+                    <label>Email Address</label>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email"
+                               name="email"
+                               placeholder="Enter your email address"
+                               required>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="input-box">
+                    <label>Mobile Number</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="text"
+                               name="mobile"
+                               placeholder="Enter your mobile number"
+                               required>
+                    </div>
+                </div>
+
+                <!-- DOB -->
+                <div class="input-box">
+                    <label>Date of Birth</label>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date"
+                               name="dob"
+                               required>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="input-box">
+                    <label>Password</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Create a password"
+                               required>
+
+                        <i class="fa-regular fa-eye eye"
+                           onclick="togglePassword('password',this)">
+                        </i>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-box">
+                    <label>Confirm Password</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                               id="confirmPassword"
+                               name="confirmPassword"
+                               placeholder="Confirm your password"
+                               required>
+
+                        <i class="fa-regular fa-eye eye"
+                           onclick="togglePassword('confirmPassword',this)">
+                        </i>
+                    </div>
+                </div>
+
+                <!-- Subject -->
+                <div class="input-box">
+                    <label>Subject Specialization</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <select name="subject" required>
+                            <option value="">Select your subject</option>
+                            <option>Mathematics</option>
+                            <option>Science</option>
+                            <option>English</option>
+                            <option>Computer Science</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Qualification -->
+                <div class="input-box">
+                    <label>Qualification</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <select name="qualification" required>
+                            <option value="">Select qualification</option>
+                            <option>B.Ed</option>
+                            <option>M.Ed</option>
+                            <option>M.Sc</option>
+                            <option>PhD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="input-box">
+                    <label>Experience (Years)</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <input type="number"
+                               name="experience"
+                               placeholder="Enter years of experience"
+                               required>
+                    </div>
+                </div>
+
+                <!-- Photo -->
+                <div class="input-box">
+                    <label>Profile Photo</label>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-upload"></i>
+
+                        <input type="file"
+                               name="photo">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" required>
+                I agree to Terms and Conditions
+            </div>
+
+            <button type="submit" class="btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Create Account
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
