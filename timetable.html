@@ -1,0 +1,352 @@
+<!-- timetable.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Class Time Table</title>
+
+<link rel="stylesheet" href="style1.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="top-bar">
+
+        <div class="logo-section">
+
+            <div class="logo-box">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <div>
+                <h1>ATTANCE</h1>
+                <h2>STUDENT CLASS TIME TABLE</h2>
+                <p>Create and Manage Class Time Table</p>
+            </div>
+
+        </div>
+
+        <!-- PROFILE -->
+        <div class="profile-card">
+
+            <img src="student.jpg">
+
+            <div>
+                <h3>John Doe</h3>
+                <p>Class 12 - Science</p>
+                <p>Roll No: 23</p>
+                <p>john.doe@example.com</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="main-box">
+
+        <h3 class="title">CREATE TIME TABLE</h3>
+
+        <form action="timetable" method="post">
+
+            <!-- TOP INPUTS -->
+            <div class="top-inputs">
+
+                <div class="input-box">
+                    <label>Class</label>
+
+                    <select name="classname">
+                        <option>Class 12 - Science</option>
+                        <option>Class 10</option>
+                        <option>Class 11</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Section</label>
+
+                    <select name="section">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Effective From</label>
+
+                    <input type="date" name="date">
+                </div>
+
+                <div class="radio-box">
+
+                    <label>Time Format</label>
+
+                    <div class="radio-group">
+                        <input type="radio" name="timeformat"> 12 Hours
+                        <input type="radio" name="timeformat" checked> 24 Hours
+                    </div>
+
+                </div>
+
+                <button type="button" class="period-btn">
+                    <i class="fa-solid fa-plus"></i> Add Period
+                </button>
+
+            </div>
+
+            <!-- PERIOD BOXES -->
+            <div class="period-container">
+
+                <div class="period-box">
+                    <h4>1</h4>
+                    <p>08:00 - 08:45</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>2</h4>
+                    <p>08:45 - 09:30</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>3</h4>
+                    <p>09:30 - 10:15</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>4</h4>
+                    <p>10:35 - 11:20</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>5</h4>
+                    <p>11:20 - 12:05</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>6</h4>
+                    <p>12:05 - 12:50</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>7</h4>
+                    <p>01:30 - 02:15</p>
+                </div>
+
+                <div class="period-box">
+                    <h4>8</h4>
+                    <p>02:15 - 03:00</p>
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Day / Period</th>
+
+                        <th>1 <br>08:00 - 08:45</th>
+                        <th>2 <br>08:45 - 09:30</th>
+                        <th>3 <br>09:30 - 10:15</th>
+                        <th>4 <br>10:35 - 11:20</th>
+                        <th>5 <br>11:20 - 12:05</th>
+                        <th>6 <br>12:05 - 12:50</th>
+                        <th>7 <br>01:30 - 02:15</th>
+                        <th>8 <br>02:15 - 03:00</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <!-- Monday -->
+                    <tr>
+
+                        <td>Monday</td>
+
+                        <td>
+                            <select name="m1">
+                                <option>English</option>
+                                <option>Maths</option>
+                                <option>Physics</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m2">
+                                <option>Physics</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m3">
+                                <option>Chemistry</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m4">
+                                <option>Maths</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m5">
+                                <option>Biology</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m6">
+                                <option>Computer</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="m7">
+                                <option>Physical Edu.</option>
+                            </select>
+                        </td>
+
+                        <td>-</td>
+
+                    </tr>
+
+                    <!-- Tuesday -->
+                    <tr>
+
+                        <td>Tuesday</td>
+
+                        <td><select name="t1"><option>Physics</option></select></td>
+                        <td><select name="t2"><option>Chemistry</option></select></td>
+                        <td><select name="t3"><option>Maths</option></select></td>
+                        <td><select name="t4"><option>English</option></select></td>
+                        <td><select name="t5"><option>Computer</option></select></td>
+                        <td><select name="t6"><option>Biology</option></select></td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+
+                    <!-- Wednesday -->
+                    <tr>
+
+                        <td>Wednesday</td>
+
+                        <td><select name="w1"><option>Chemistry</option></select></td>
+                        <td><select name="w2"><option>Maths</option></select></td>
+                        <td><select name="w3"><option>Physics</option></select></td>
+                        <td><select name="w4"><option>Biology</option></select></td>
+                        <td><select name="w5"><option>English</option></select></td>
+                        <td><select name="w6"><option>Computer</option></select></td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+
+                    <!-- Thursday -->
+                    <tr>
+
+                        <td>Thursday</td>
+
+                        <td><select name="th1"><option>Maths</option></select></td>
+                        <td><select name="th2"><option>English</option></select></td>
+                        <td><select name="th3"><option>Biology</option></select></td>
+                        <td><select name="th4"><option>Physics</option></select></td>
+                        <td><select name="th5"><option>Chemistry</option></select></td>
+                        <td><select name="th6"><option>Computer</option></select></td>
+                        <td><select name="th7"><option>Physical Edu.</option></select></td>
+                        <td>-</td>
+
+                    </tr>
+
+                    <!-- Friday -->
+                    <tr>
+
+                        <td>Friday</td>
+
+                        <td><select name="f1"><option>English</option></select></td>
+                        <td><select name="f2"><option>Physics</option></select></td>
+                        <td><select name="f3"><option>Computer</option></select></td>
+                        <td><select name="f4"><option>Maths</option></select></td>
+                        <td><select name="f5"><option>Chemistry</option></select></td>
+                        <td><select name="f6"><option>Biology</option></select></td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+
+                    <!-- Saturday -->
+                    <tr>
+
+                        <td>Saturday</td>
+
+                        <td><select name="s1"><option>Computer</option></select></td>
+                        <td><select name="s2"><option>Biology</option></select></td>
+                        <td><select name="s3"><option>English</option></select></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- NOTE -->
+            <div class="note-box">
+
+                <label>Note (Optional)</label>
+
+                <input type="text"
+                       name="note"
+                       placeholder="Enter any note...">
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="bottom-buttons">
+
+                <button type="reset" class="cancel-btn">
+                    Cancel
+                </button>
+
+                <button type="submit" class="save-btn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Time Table
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
