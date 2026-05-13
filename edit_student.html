@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="top-bar">
+            <div>
+                <h1>Student Management System</h1>
+                <p>Welcome, Manish</p>
+            </div>
+
+            <div class="top-buttons">
+                <button class="add-btn" onclick="openModal()">
+                    + Add Student
+                </button>
+
+                <button class="logout-btn">
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-msg" id="successMsg">
+            Student added successfully!
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search student">
+            <button onclick="searchStudent()">Search</button>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+                <!-- Dynamic Data -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="studentModal">
+        <div class="modal-content">
+
+            <h2>Add Student</h2>
+            
+            <form action="StudentServlet" method="post"></form>
+            <input type="hidden" id="studentId">
+
+            <input type="text" id="name" placeholder="Enter name">
+            <input type="number" id="age" placeholder="Enter age">
+            <input type="text" id="course" placeholder="Enter course">
+
+            <div class="modal-buttons">
+                <button class="save-btn" onclick="saveStudent()">Save</button>
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html> check
