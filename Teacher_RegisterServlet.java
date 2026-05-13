@@ -56,7 +56,7 @@ public class RegisterServlet extends HttpServlet {
 
             if(i > 0){
 
-                response.sendRedirect("success.html");
+                response.sendRedirect("home.html");
 
             }else{
 
